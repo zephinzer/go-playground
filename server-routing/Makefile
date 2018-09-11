@@ -26,7 +26,7 @@ dep.ensure:
 	docker run \
 		-v "$$(pwd):/go/src/$(PROJECT_NAME)" \
 		$(DOCKERREPO) \
-		dep ensure
+		dep ensure -v
 
 dep.init:
 	docker run \

@@ -1,5 +1,7 @@
-DOCKERREPO=experiment-go/basic-server
+include ../Makefile.properties
+
 PROJECT_NAME=$$(basename $$(pwd))
+DOCKERREPO=$(REPO_NAME)/$(PROJECT_NAME)
 
 # docker image to use in production
 IMAGE_NAME_PRODUCTION=alpine:3.8
