@@ -1,6 +1,12 @@
 # Experiments in Go
 A repository with code for myself to learn and practice Golang using practical applications.
 
+## Example Listing
+
+- [Basic Server](./basic-server)
+- [Logger](./logger)
+- [Server with Routing](./server-routing)
+
 ## Running Applications
 All projects use `Makefile`s to execute.
 
