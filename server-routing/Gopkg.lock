@@ -112,6 +112,14 @@
   version = "v1.2.0"
 
 [[projects]]
+  branch = "master"
+  digest = "1:9624432019da6390fc19bd6ef16d110efb7bee291f1d9048273ab229fcb2bea1"
+  name = "github.com/unrolled/secure"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "8287f3899c8e3d490748e18fe7d438629132914e"
+
+[[projects]]
   digest = "1:3c1a69cdae3501bf75e76d0d86dc6f2b0a7421bc205c0cb7b96b19eed464a34d"
   name = "go.uber.org/atomic"
   packages = ["."]
@@ -171,6 +179,7 @@
   input-imports = [
     "github.com/gorilla/mux",
     "github.com/spf13/viper",
+    "github.com/unrolled/secure",
     "go.uber.org/zap",
   ]
   solver-name = "gps-cdcl"

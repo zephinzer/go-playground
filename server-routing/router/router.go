@@ -5,17 +5,29 @@ import (
 	"os"
 	"server-routing/logger"
 	methodRoute "server-routing/router/method"
+	paramRoute "server-routing/router/param"
 	staticRoute "server-routing/router/static"
 	"time"
 
 	"github.com/gorilla/mux"
+	"github.com/unrolled/secure"
 )
 
 // Create the router and return it
 func Create() *mux.Router {
 	router := mux.NewRouter()
+	secureMiddleware := secure.New(secure.Options{
+		AllowedHosts:       []string{"localhost:9090"},
+		BrowserXssFilter:   true,
+		ContentTypeNosniff: true,
+		ForceSTSHeader:     true,
+		FrameDeny:          true,
+		STSSeconds:         5000,
+	})
+	router.Use(secureMiddleware.Handler)
 	staticRoute.Provision(router)
 	methodRoute.Provision(router)
+	paramRoute.Provision(router)
 	router.Use(routerLogger)
 	return router
 }

@@ -3,8 +3,9 @@ Short project description.
 
 ## Scope
 - [x] Demonstrate serving of static files
-- [ ] Demonstrate using a URL path parameter
-- [ ] Demonstrate using a HTTP header
+- [x] Demonstrate using a URL path parameter
+- [x] Demonstrate retrieving a HTTP header
+- [x] Demonstrate setting a HTTP header
 - [x] Demonstrate distributed sub-routers
 - [x] Demonstrate directory/route parity
 - [x] Demonstrate server middleware

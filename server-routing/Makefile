@@ -20,7 +20,7 @@ dep.add:
 	docker run \
 		-v "$$(pwd):/go/src/$(PROJECT_NAME)" \
 		$(DOCKERREPO) \
-		dep ensure -add ${DEP}
+		dep ensure -v -add ${DEP}
 
 dep.ensure:
 	docker run \
